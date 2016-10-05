@@ -42,6 +42,8 @@ void loop() {
   
   // Convert sensorData to inches and print
   inches = sensorData/1.959 ;
+  Serial.print(sensorData);
+  Serial.print(" raw sensor data. ");
   Serial.print(inches);
   Serial.print("in ");
   Serial.println();
