@@ -1,11 +1,12 @@
 // Haptic Device
 // Authors: Savannah Benbrook, Tim McCormick, Brian Sakhuja
-// September 25, 2016
-// 
+// December 1, 2016
+//
+// Lilypad Pin Layout Reference: http://pighixxx.com/lilypadbase.pdf
 
 // Define pins
-const int sensorPin = 5;
-const int motorPin = 6;
+const int sensorPin = 17; //A3 on Lilypad ANALOG INPUT
+const int motorPin = 15; //A1 on Lilypad ANALOG OUTPUT
 
 // Define global variables
 long sensorData, inches, cm, dutyCycle;
