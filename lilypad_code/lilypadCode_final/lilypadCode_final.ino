@@ -37,26 +37,31 @@ void loop() {
   cm = inches * 2.54;
   pulse2analog = 255/(254*147);
 
-  if (inches <= 120 && inches > 100) { // Object between 120 and 100 inches
+  if (inches <= 180 && inches > 120) { // Object between 180 and 120 inches
     analogWrite(motorPin, 255);
     delay(50);
     analogWrite(motorPin,0);
-    delay(450);
+    delay(950);
+  } else if(inches <= 120 && inches > 100) { // Object between 120 and 100 inches
+    analogWrite(motorPin, 255);
+    delay(50);
+    analogWrite(motorPin,0);
+    delay(750);
   } else if (inches <= 100 && inches > 80) { // Object between 100 and 80 inches
     analogWrite(motorPin, 255);
     delay(100);
     analogWrite(motorPin,0);
-    delay(400);  
+    delay(500);  
   } else if (inches <= 80 && inches > 60) { // Object between 80 and 60 inches
      analogWrite(motorPin, 255);
     delay(200);
     analogWrite(motorPin,0);
-    delay(300);
+    delay(400);
   } else if (inches <= 60 && inches > 50) { // Object between 60 and 50 inches
     analogWrite(motorPin, 255);
     delay(200);
     analogWrite(motorPin,0);
-    delay(250);
+    delay(300);
   } else if(inches <= 50 && inches > 40) { // Object between 50 and 40 inches
     analogWrite(motorPin, 255);
     delay(200);
@@ -71,17 +76,22 @@ void loop() {
     analogWrite(motorPin, 255);
     delay(200);
     analogWrite(motorPin,0);
-    delay(100);
+    delay(150);
   } else if(inches <= 20 && inches > 15) { // Object between 20 and 15 inches
     analogWrite(motorPin, 255);
-    delay(150);
+    delay(200);
     analogWrite(motorPin,0);
     delay(100);
-  } else if(inches <= 15 && inches > 5) { // Object between 15 and 5 inches
+  } else if(inches <= 15 && inches > 10) { // Object between 15 and 10 inches
+    analogWrite(motorPin, 255);
+    delay(250);
+    analogWrite(motorPin,0);
+    delay(50);
+  } else if(inches <= 10 && inches > 5) { // Object between 10 and 5 inches
     analogWrite(motorPin, 255);
     delay(150);
     analogWrite(motorPin,0);
-    delay(50);
+    delay(50);  
   } else { // Object is too close or too far. No vibration.
     analogWrite(motorPin,0);
   }
