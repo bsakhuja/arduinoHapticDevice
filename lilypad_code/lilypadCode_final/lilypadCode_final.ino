@@ -41,27 +41,27 @@ void loop() {
     analogWrite(motorPin, 255);
     delay(50);
     analogWrite(motorPin,0);
-    delay(450);
+    delay(400);
   } else if (inches <= 100 && inches > 80) { // Object between 100 and 80 inches
     analogWrite(motorPin, 255);
     delay(100);
     analogWrite(motorPin,0);
-    delay(400);  
+    delay(300);  
   } else if (inches <= 80 && inches > 60) { // Object between 80 and 60 inches
      analogWrite(motorPin, 255);
     delay(150);
     analogWrite(motorPin,0);
-    delay(350);
+    delay(250);
   } else if (inches <= 60 && inches > 50) { // Object between 60 and 50 inches
     analogWrite(motorPin, 255);
     delay(200);
     analogWrite(motorPin,0);
-    delay(300);
+    delay(250);
   } else if(inches <= 50 && inches > 40) { // Object between 50 and 40 inches
     analogWrite(motorPin, 255);
     delay(250);
     analogWrite(motorPin,0);
-    delay(250);
+    delay(100);
   } else if (inches <= 40 && inches > 30) { // Object between 40 and 30 inches
     analogWrite(motorPin, 255);
     delay(300);
@@ -72,7 +72,12 @@ void loop() {
     delay(200);
     analogWrite(motorPin,0);
     delay(50);
-  } else if(inches <= 20 && inches > 10) { // Object between 20 and 30 inches
+  } else if(inches <= 20 && inches > 15) { // Object between 20 and 15 inches
+    analogWrite(motorPin, 255);
+    delay(150);
+    analogWrite(motorPin,0);
+    delay(50);
+  } else if(inches <= 15 && inches > 6) { // Object between 15 and 6 inches
     analogWrite(motorPin, 255);
     delay(100);
     analogWrite(motorPin,0);
