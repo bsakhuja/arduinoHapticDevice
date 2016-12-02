@@ -41,17 +41,17 @@ void loop() {
     analogWrite(motorPin, 255);
     delay(50);
     analogWrite(motorPin,0);
-    delay(400);
+    delay(450);
   } else if (inches <= 100 && inches > 80) { // Object between 100 and 80 inches
     analogWrite(motorPin, 255);
     delay(100);
     analogWrite(motorPin,0);
-    delay(300);  
+    delay(400);  
   } else if (inches <= 80 && inches > 60) { // Object between 80 and 60 inches
      analogWrite(motorPin, 255);
-    delay(150);
+    delay(200);
     analogWrite(motorPin,0);
-    delay(250);
+    delay(300);
   } else if (inches <= 60 && inches > 50) { // Object between 60 and 50 inches
     analogWrite(motorPin, 255);
     delay(200);
@@ -59,27 +59,27 @@ void loop() {
     delay(250);
   } else if(inches <= 50 && inches > 40) { // Object between 50 and 40 inches
     analogWrite(motorPin, 255);
-    delay(250);
+    delay(200);
     analogWrite(motorPin,0);
-    delay(100);
+    delay(200);
   } else if (inches <= 40 && inches > 30) { // Object between 40 and 30 inches
     analogWrite(motorPin, 255);
-    delay(300);
+    delay(200);
     analogWrite(motorPin,0);
-    delay(50);
+    delay(150);
   } else if(inches <= 30 && inches > 20) { // Object between 30 and 20 inches
     analogWrite(motorPin, 255);
     delay(200);
     analogWrite(motorPin,0);
-    delay(50);
+    delay(100);
   } else if(inches <= 20 && inches > 15) { // Object between 20 and 15 inches
     analogWrite(motorPin, 255);
     delay(150);
     analogWrite(motorPin,0);
-    delay(50);
-  } else if(inches <= 15 && inches > 6) { // Object between 15 and 6 inches
-    analogWrite(motorPin, 255);
     delay(100);
+  } else if(inches <= 15 && inches > 5) { // Object between 15 and 5 inches
+    analogWrite(motorPin, 255);
+    delay(150);
     analogWrite(motorPin,0);
     delay(50);
   } else { // Object is too close or too far. No vibration.
