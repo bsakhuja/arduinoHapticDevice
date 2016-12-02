@@ -37,7 +37,6 @@ void loop() {
   cm = inches * 2.54;
   pulse2analog = 255/(254*147);
 
-  // Delay on + delay off = 500 ms
   if (inches <= 120 && inches > 100) { // Object between 120 and 100 inches
     analogWrite(motorPin, 255);
     delay(50);
@@ -65,17 +64,17 @@ void loop() {
     delay(250);
   } else if (inches <= 40 && inches > 30) { // Object between 40 and 30 inches
     analogWrite(motorPin, 255);
-    delay(350);
+    delay(300);
     analogWrite(motorPin,0);
-    delay(150);
+    delay(50);
   } else if(inches <= 30 && inches > 20) { // Object between 30 and 20 inches
     analogWrite(motorPin, 255);
-    delay(400);
+    delay(200);
     analogWrite(motorPin,0);
-    delay(100);
+    delay(50);
   } else if(inches <= 20 && inches > 10) { // Object between 20 and 30 inches
     analogWrite(motorPin, 255);
-    delay(450);
+    delay(100);
     analogWrite(motorPin,0);
     delay(50);
   } else { // Object is too close or too far. No vibration.
